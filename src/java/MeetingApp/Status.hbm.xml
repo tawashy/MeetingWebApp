@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 22, 2017 8:53:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="MeetingApp.Status" table="STATUS" catalog="meeting_db" optimistic-lock="version">
+        <id name="statusId" type="int">
+            <column name="STATUS_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="statusType" type="string">
+            <column name="STATUS_TYPE" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

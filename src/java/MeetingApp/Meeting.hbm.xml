@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 22, 2017 8:53:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="MeetingApp.Meeting" table="MEETING" catalog="meeting_db" optimistic-lock="version">
+        <id name="meetingId" type="java.lang.Integer">
+            <column name="MEETING_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="meetingName" type="string">
+            <column name="MEETING_NAME" length="45" not-null="true" />
+        </property>
+        <property name="meetingDescription" type="string">
+            <column name="MEETING_DESCRIPTION" length="45" not-null="true" />
+        </property>
+        <property name="meetingDate" type="date">
+            <column name="MEETING_DATE" length="10" not-null="true" />
+        </property>
+        <property name="meetingTime" type="time">
+            <column name="MEETING_TIME" length="8" not-null="true" />
+        </property>
+        <property name="meetingLocation" type="string">
+            <column name="MEETING_LOCATION" length="45" not-null="true" />
+        </property>
+        <property name="hostId" type="int">
+            <column name="HOST_ID" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

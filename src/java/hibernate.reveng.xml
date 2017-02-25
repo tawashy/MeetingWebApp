@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="meeting_db"/>
+  <table-filter match-name="MEETING"/>
+  <table-filter match-name="PARTICIPANT_MEETING"/>
+  <table-filter match-name="HOST"/>
+  <table-filter match-name="STATUS"/>
+  <table-filter match-name="PARTICIPANT"/>
+</hibernate-reverse-engineering>
