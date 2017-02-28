@@ -2,10 +2,35 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:composition template="Template.xhtml">
         <ui:define name="body">
-            <h:form></h:form>
+            <div class="well">
+                <!-- Form -->
+                <h:form>
+                    <!-- Name group -->
+                    <div class="form-group">
+                        <label for="contactName">Name</label>
+                        <h:inputText id="first" class="form-control" value="#{hostController.name}"
+                                 size="50" maxlength="45" required="true" label="Name" />
+                        <h:message for="first" style="color: red; font-size: 0.7em" />
+                    </div>
+                    <!-- Email group -->
+                    <div class="form-group">
+                        <label for="contactName">Email</label>
+                        <h:inputText id="first" class="form-control" value="#{hostController.email}"
+                                 size="50" maxlength="45" required="true" label="email" />
+                        <h:message for="first" style="color: red; font-size: 0.7em" />
+                    </div>
+                    <div class="form-group">
+                        <h:commandButton id="submit" value="submit" action="index" />
+                        <h:commandButton value="clear" type="reset" />
+                    </div>
+                </h:form>
+                <h:outputText escape="false" value="#{hostController.response}" />
+            </div>
+            
         </ui:define>
     </ui:composition>
     
